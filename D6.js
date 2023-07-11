@@ -42,7 +42,12 @@ console.log(somma(arreyNumeri));
 
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
-*/
+*/ const sumNum = (arr) => {
+  return arr.reduce((acc, curr) => {
+    return acc + curr;
+  }, 0);
+};
+console.log(sumNum(arreyNumeri));
 
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
@@ -225,12 +230,12 @@ console.log(millenium(movies));
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
-// const sumYear = (mov) => {
-//   let sum = 0;
-//   sum = mov.reduce((sum, el) => sum + el);
-//   return sum;
-// };
-// console.log(sumYear(movies));
+const sumYear = (mov) => {
+  return mov.reduce((acc, curr) => {
+    return acc + parseInt(curr.Year);
+  }, 0);
+};
+console.log(sumYear(movies));
 
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
